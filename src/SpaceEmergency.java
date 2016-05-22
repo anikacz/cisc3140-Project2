@@ -1,4 +1,5 @@
 import java.awt.Font;
+import java.awt.Frame;
 import java.awt.GridBagConstraints;
 import java.io.File;
 import java.io.IOException;
@@ -15,7 +16,8 @@ import javax.swing.SwingConstants;
 public class SpaceEmergency extends GameFrame {
 
     private static Scanner scanner;
-
+    public GameFrame frame = new GameFrame();
+    
 	public SpaceEmergency() throws  IOException {
 
         scanner = new Scanner(new File("/Users/AnikaCzander/Documents/workspace/Project2/src/AB-small-practice.in"));
@@ -25,7 +27,7 @@ public class SpaceEmergency extends GameFrame {
         // we multiply distances and speed with two so we don't have floats
         // this means regular speed is 1, boosted speed is 2
         
-        JFrame frame = new GameFrame();
+        //JFrame frame = new GameFrame();
         String labelText = "<html>";
        // JPanel panel = new JPanel();
 
@@ -94,6 +96,8 @@ public class SpaceEmergency extends GameFrame {
         frame.add(myText);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
+        frame.moveImg();
+        
     }
 	
 

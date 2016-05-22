@@ -10,6 +10,8 @@ import javax.swing.SwingConstants;
 
 
 public class GameFrame extends JFrame {
+	
+	public JLabel imageLabel;
 	public GameFrame() {
 		setTitle("Game Frame");
 		setSize(800,800); //default size is 0,0
@@ -27,7 +29,7 @@ public class GameFrame extends JFrame {
 		
 		setLayout(null);
 		ImageIcon ship = new ImageIcon("/Users/AnikaCzander/Desktop/rocketship14.png");
-		JLabel imageLabel = new JLabel(ship);
+		imageLabel = new JLabel(ship);
 		imageLabel.setLocation(20, 20);
 		imageLabel.setSize(400,400);
 		imageLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -37,20 +39,52 @@ public class GameFrame extends JFrame {
 		
 		ImageIcon planet = new ImageIcon("/Users/AnikaCzander/Desktop/planet.png");
 		JLabel imageLabel2 = new JLabel(planet);
-		imageLabel2.setLocation(10, 10);
+		imageLabel2.setLocation(500, 10);
 		imageLabel2.setSize(400,400);
 		imageLabel2.setHorizontalAlignment(SwingConstants.CENTER);
 		imageLabel2.setVerticalAlignment(SwingConstants.CENTER);
 		imageLabel2.setVisible(true);
 		add(imageLabel2);
 		
+		ImageIcon planet2 = new ImageIcon("/Users/AnikaCzander/Desktop/planet.png");
+		JLabel imageLabel3 = new JLabel(planet2);
+		imageLabel3.setLocation(7, 10);
+		imageLabel3.setSize(400,400);
+		imageLabel3.setHorizontalAlignment(SwingConstants.CENTER);
+		imageLabel3.setVerticalAlignment(SwingConstants.CENTER);
+		imageLabel3.setVisible(true);
+		add(imageLabel3);
 		
+
+		/*for(int i = 0; i <= 500; i++)
+		{
+			imageLabel.setLocation(20+i,20);
+			this.repaint();
+		}
+		
+		return;*/
 	}
+	
 	
 	public static void main(String[] args) throws IOException
 	{
-		//Frame frame = new GameFrame();
+		//GameFrame frame = new GameFrame();
 		//frame.setVisible(true);
 		SpaceEmergency space = new SpaceEmergency();
+	}
+	
+	public void moveImg()
+	{
+		for(int i = 0; i <= 500; i++)
+		{
+			this.imageLabel.setLocation(20+i,20);
+			try {
+				Thread.sleep(75);
+			} catch (InterruptedException e) {
+				// Auto-generated catch block
+				e.printStackTrace();
+			}
+			this.repaint();
+		}
 	}
 }
