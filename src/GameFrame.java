@@ -28,6 +28,7 @@ public class GameFrame extends JFrame {
 
 		
 		setLayout(null);
+		//sets ship image
 		ImageIcon ship = new ImageIcon("/Users/AnikaCzander/Desktop/rocketship14.png");
 		imageLabel = new JLabel(ship);
 		imageLabel.setLocation(20, 20);
@@ -55,31 +56,22 @@ public class GameFrame extends JFrame {
 		imageLabel3.setVisible(true);
 		add(imageLabel3);
 		
-
-		/*for(int i = 0; i <= 500; i++)
-		{
-			imageLabel.setLocation(20+i,20);
-			this.repaint();
-		}
-		
-		return;*/
 	}
 	
 	
 	public static void main(String[] args) throws IOException
 	{
-		//GameFrame frame = new GameFrame();
-		//frame.setVisible(true);
-		SpaceEmergency space = new SpaceEmergency();
+		SpaceEmergency space = new SpaceEmergency();	 //calls space emergency class
 	}
 	
+	//animation for the ship image
 	public void moveImg()
 	{
 		for(int i = 0; i <= 500; i++)
 		{
 			this.imageLabel.setLocation(20+i,20);
 			try {
-				Thread.sleep(10);
+				Thread.sleep(10);	//THREAD sleep used to slow down ship simulation
 			} catch (InterruptedException e) {
 				// Auto-generated catch block
 				e.printStackTrace();

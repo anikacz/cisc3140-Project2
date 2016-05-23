@@ -21,15 +21,15 @@ public class SpaceEmergency extends GameFrame {
 	public SpaceEmergency() throws  IOException {
 
         scanner = new Scanner(new File("/Users/AnikaCzander/Documents/workspace/Project2/src/AB-small-practice.in"));
-       // PrintStream out = new PrintStream(new File("space.out"));
+       
         int testcases = scanner.nextInt();
 
         // we multiply distances and speed with two so we don't have floats
         // this means regular speed is 1, boosted speed is 2
         
-        //JFrame frame = new GameFrame();
+        
         String labelText = "<html>";
-       // JPanel panel = new JPanel();
+       
 
         for (int casenr = 1; casenr <= testcases; casenr++) {
 
@@ -78,9 +78,8 @@ public class SpaceEmergency extends GameFrame {
                     track.remove(0);
                 }
             }
-          //System.out.printf("Case #%d: %s\n", casenr, time);
-            //String str = ("Case #%d: %s\n"+casenr+time);
-            //out.printf("Case #%d: %s\n", casenr, time);
+          
+            //formats the cases into columns every 5th case
             if((casenr%5) == 0)
             {
             	labelText += "Case # "+casenr+ " : "+time+"<br>";	
@@ -90,16 +89,7 @@ public class SpaceEmergency extends GameFrame {
          
         }
         labelText += "</html>";
-       
-       /* JLabel myText = new JLabel(labelText);
-        myText.setFont(new Font("Verdana",0,12));
-       // panel.add(myText);
-        myText.setLocation(100,100);
-        myText.setSize(800,800);
-        myText.setHorizontalAlignment(SwingConstants.LEFT);
-		myText.setVerticalAlignment(SwingConstants.CENTER);
-        myText.setVisible(true);
-        frame.add(myText);*/
+      
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
         frame.moveImg();
@@ -107,7 +97,7 @@ public class SpaceEmergency extends GameFrame {
         
     }
 	
-	public void DisplayCases(String info)
+	public void DisplayCases(String info) //displays the cases from Space Emergency function
 	{
 		 JLabel myText = new JLabel(info);
 	     myText.setFont(new Font(Font.MONOSPACED,0,12));
