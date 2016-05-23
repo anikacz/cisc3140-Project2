@@ -81,24 +81,47 @@ public class SpaceEmergency extends GameFrame {
           //System.out.printf("Case #%d: %s\n", casenr, time);
             //String str = ("Case #%d: %s\n"+casenr+time);
             //out.printf("Case #%d: %s\n", casenr, time);
-            labelText += "Case # "+casenr+ " : "+time+"<br>";
+            if((casenr%5) == 0)
+            {
+            	labelText += "Case # "+casenr+ " : "+time+"<br>";	
+            }
+            else
+            	labelText += "Case # "+casenr+ " : "+time+"\t\t\t";
          
         }
         labelText += "</html>";
-        JLabel myText = new JLabel(labelText);
-        myText.setFont(new Font("Verdana",0,7));
+       
+       /* JLabel myText = new JLabel(labelText);
+        myText.setFont(new Font("Verdana",0,12));
        // panel.add(myText);
-        myText.setLocation(30,10);
-        myText.setSize(300,700);
+        myText.setLocation(100,100);
+        myText.setSize(800,800);
         myText.setHorizontalAlignment(SwingConstants.LEFT);
 		myText.setVerticalAlignment(SwingConstants.CENTER);
         myText.setVisible(true);
-        frame.add(myText);
+        frame.add(myText);*/
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
         frame.moveImg();
+        DisplayCases(labelText);
         
     }
+	
+	public void DisplayCases(String info)
+	{
+		 JLabel myText = new JLabel(info);
+	     myText.setFont(new Font(Font.MONOSPACED,0,12));
+	     myText.setLocation(100,100);
+	     myText.setSize(800,800);
+	     myText.setHorizontalAlignment(SwingConstants.LEFT);
+	     myText.setVerticalAlignment(SwingConstants.CENTER);
+	     
+	     frame.add(myText);
+	     myText.setVisible(true);
+	     frame.setVisible(true);
+	     frame.repaint();
+		
+	}
 	
 
 }

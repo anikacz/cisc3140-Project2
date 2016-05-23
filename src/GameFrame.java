@@ -1,7 +1,7 @@
 import java.awt.*;
 import java.awt.event.*;
 import java.io.IOException;
-import java.awt.Graphics2D;
+
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -79,12 +79,22 @@ public class GameFrame extends JFrame {
 		{
 			this.imageLabel.setLocation(20+i,20);
 			try {
-				Thread.sleep(75);
+				Thread.sleep(10);
 			} catch (InterruptedException e) {
 				// Auto-generated catch block
 				e.printStackTrace();
 			}
 			this.repaint();
 		}
+		JLabel myText = new JLabel("Simulation Complete!");
+        myText.setFont(new Font(Font.MONOSPACED,0,12));
+        myText.setLocation(25,100);
+        myText.setSize(800,800);
+        myText.setHorizontalAlignment(SwingConstants.LEFT);
+		myText.setVerticalAlignment(SwingConstants.TOP);
+        myText.setVisible(true);
+        this.add(myText);
+        this.repaint();
+		
 	}
 }
