@@ -20,7 +20,7 @@ public class SpaceEmergency extends GameFrame {
     
 	public SpaceEmergency() throws  IOException {
 
-        scanner = new Scanner(new File("/Users/AnikaCzander/Documents/workspace/Project2/src/AB-small-practice.in"));
+        scanner = new Scanner(new File("src/AB-small-practice.in"));
        
         int testcases = scanner.nextInt();
 

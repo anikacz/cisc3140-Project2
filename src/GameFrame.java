@@ -1,4 +1,5 @@
 import java.awt.*;
+
 import java.awt.event.*;
 import java.io.IOException;
 
@@ -29,7 +30,7 @@ public class GameFrame extends JFrame {
 		
 		setLayout(null);
 		//sets ship image
-		ImageIcon ship = new ImageIcon("/Users/AnikaCzander/Desktop/rocketship14.png");
+		ImageIcon ship = new ImageIcon("src/rocketship14.png");
 		imageLabel = new JLabel(ship);
 		imageLabel.setLocation(20, 20);
 		imageLabel.setSize(400,400);
@@ -38,7 +39,7 @@ public class GameFrame extends JFrame {
 		imageLabel.setVisible(true);
 		add(imageLabel);
 		
-		ImageIcon planet = new ImageIcon("/Users/AnikaCzander/Desktop/planet.png");
+		ImageIcon planet = new ImageIcon("src/planet.png");
 		JLabel imageLabel2 = new JLabel(planet);
 		imageLabel2.setLocation(500, 10);
 		imageLabel2.setSize(400,400);
@@ -47,7 +48,7 @@ public class GameFrame extends JFrame {
 		imageLabel2.setVisible(true);
 		add(imageLabel2);
 		
-		ImageIcon planet2 = new ImageIcon("/Users/AnikaCzander/Desktop/planet.png");
+		ImageIcon planet2 = new ImageIcon("src/planet.png");
 		JLabel imageLabel3 = new JLabel(planet2);
 		imageLabel3.setLocation(7, 10);
 		imageLabel3.setSize(400,400);
